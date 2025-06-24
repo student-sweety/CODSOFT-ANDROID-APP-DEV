@@ -1,0 +1,144 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8c6faf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+.main {
+    border: 2px solid;
+    background-color: #cab6e2;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+#curTime {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#curDate {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+
+h1, p {
+    text-align: center;
+    color: #333;
+}
+
+
+#set-time,
+#set-alarm,
+#stop-alarm,
+#snooze-alarm {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 70%;
+    max-width: 200px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#set-time {
+    background-color: #e0e0e0;
+}
+
+#set-alarm {
+    background-color: rgb(213, 47, 255);
+    color: #fff;
+}
+
+#set-alarm:hover {
+    background-color: #af594c;
+}
+
+#stop-alarm {
+    display: none;
+    background-color: #f44336;
+    color: #fff;
+}
+
+#snooze-alarm {
+    display: none;
+    background-color: #0096FF;
+    color: #fff;
+}
+
+
+.snooze-time, #snooze-msg, #alarm-notif, #alarm-time {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+#snooze-msg {
+    color: #f44336;
+}
+
+#alarm-notif {
+    color: #191970;
+}
+
+#alarm-time {
+    color: darkblue;
+}
+
+#alarm-sound-select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 250px;
+    border: none;
+    border-radius: 8px;
+    background-color: #726faf;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#alarm-input {
+    display: block;
+    margin: 10px auto;
+    font-size: 1rem;
+    padding: 10px;
+    width: 70%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    #curTime {
+        font-size: 2rem;
+    }
+
+    #curDate {
+        font-size: 1rem;
+    }
+
+    #set-time,
+    #set-alarm,
+    #stop-alarm,
+    #snooze-alarm,
+    #alarm-sound-select,
+    #alarm-input {
+        width: 90%;
+    }
+}

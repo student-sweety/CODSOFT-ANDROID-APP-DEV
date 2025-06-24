@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Alarm Clock</h1>
+        <div class="container">
+            <div id="curTime"></div>
+            <div id="curDate"></div>
+            <p>Set the alarm time:</p>
+               <input type="time" id="set-time">
+               <div id="alert-msg"></div>
+        <div class="snooze-time">
+            Enter snooze time:
+            <input type="text" id="snooze-time-min" placeholder="in minutes">
+        </div>
+        <div class="buttons">
+            <select id="alarm-sound-select" placeholder>
+                <option value="">select alarm sound</option>
+                <option value="audio/audio1.mp3">Alarm sound 1</option>
+                <option value="audio/audio2.mp3">Alarm sound 2</option>
+                <option value="audio/audio3.mp3">Alarm sound 3</option>
+                <option value="audio/audio4.mp3">Alarm sound 4</option>
+            </select>
+            <div id="snooze-msg"></div>
+            <button id="stop-alarm">stop alarm</button>
+            <button id="snooze-alarm">snooze</button>
+            <button id="set-alarm">set alarm</button>
+        </div>
+          <p id="alarm-notif"></p>
+          <p id="alarm-time"></p>
+        </div>
+    <audio id="alarm-sound">
+      <!--<source src="audio/audio1.mp3" type="">
+      <source src="audio/audio2.mp3" type="mp3"
+      <source src="audio/audio3.mp3" type=""
+      <source src="audio/audio4.mp3" type="">-->
+      
+     </audio>
+    </div>    
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
