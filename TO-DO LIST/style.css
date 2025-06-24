@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+ --background: #000430;
+ --secondaryBackground: #171c48;
+ --text: #fff;
+ --purle: #828dff;
+ --teal: #24feee;   
+}
+body {
+    
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+}
+.stats-container{
+    
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #828dff !important;
+    display: flex; 
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+
+}
+.details{
+    width: auto;
+}
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondaryBackground);
+    border-radius: 80px;
+    margin-top: 10px;
+}
+#progress {
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.8s ease-out;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: #dd00ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+#task-form {
+    margin-top:20px;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#task-form input[type="text"],
+#task-form textarea,
+#task-form select,
+#task-form input[type="date"] {
+    padding: 10px;
+    background:var(--secondaryBackground) ;
+    color: #fff;
+    border: 1px solid var(--purle);
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+#task-form button {
+    background-color: #9b5cb8;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#task-form button:hover {
+    background-color: #9cae4c;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: black;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top for multi-line content */
+    border: 1px solid #eee;
+    border-left: 5px solid; /* For priority color */
+    transition: background-color 0.3s ease;
+}
+
+/* --- Task Completion Status Styling --- */
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #4c23c8;
+    background-color: #e5fe24;
+    opacity: 0.7;
+}
+
+/* Ensure checkbox and text are aligned */
+#task-list li > div:first-child {
+    display: flex;
+    align-items: flex-start; /* Align with the start of the text */
+    gap: 10px;
+    flex-grow: 1;
+}
+
+#task-list li input[type="checkbox"] {
+    margin-top: 8px; /* Adjust checkbox vertical alignment */
+    transform: scale(1.2); /* Make checkbox a bit bigger */
+}
+
+#task-list li strong {
+    font-size: 1.1em;
+    display: block; /* Make title take full width for better readability */
+    margin-bottom: 5px;
+}
+
+#task-list li small {
+    display: block; /* Ensure due date is on its own line */
+    color: #9cae4c;
+}
+
+#task-list li div:last-child button {
+    background-color: #007bff; /* Edit button blue */
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: 0 10px;
+    justify-content: space-between;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li div:last-child button:hover {
+    background-color: #0056b3;
+}
+
+#task-list li div:last-child button:last-child {
+    background-color: #dc3545; /* Delete button red */
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: 0 10px;
+    color: white;
+    justify-content: space-between;
+   padding: 2px 4px;
+    font-size: 0.em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li div:last-child button:last-child:hover {
+    background-color: #c82333;
+    
+}
